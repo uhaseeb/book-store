@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Books
 from django.db.models import Avg
 
+
 def index(request):
     all_books = Books.objects.all().order_by('-rating')
     count_books = all_books.count()
